@@ -1,0 +1,38 @@
+{
+    "version": "0.1.45",
+    "description": "Concentric backup agent: scheduled database backups with restore verification",
+    "homepage": "https://bckupx.com",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://agents.bckupx.com/0.1.45/agent-v0.1.45.exe#/bckupx-agent.exe",
+            "hash": "e3febd4d192c847a7469365c5e5da70d31637991d9b9169c1407e85c052fdecc"
+        }
+    },
+    "bin": "bckupx-agent.exe",
+    "notes": [
+        "To run the agent as a Windows service (starts at boot, restarts itself, keeps itself",
+        "up to date), run this once in an elevated PowerShell (Run as Administrator):",
+        "",
+        "  bckupx-agent service install",
+        "",
+        "It asks for your license key (portal: Agents -> Add agent) and master passphrase.",
+        "The service runs its own copy from C:\\Program Files\\bckupx, so `scoop update` never",
+        "has to stop it. Remove it with `bckupx-agent service uninstall` (keeps your data)."
+    ],
+    "checkver": {
+        "url": "https://agents.bckupx.com/latest.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://agents.bckupx.com/$version/agent-v$version.exe#/bckupx-agent.exe",
+                "hash": {
+                    "url": "https://agents.bckupx.com/$version/manifest.json",
+                    "jsonpath": "$.artifacts.windows.sha256"
+                }
+            }
+        }
+    }
+}
