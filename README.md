@@ -1,6 +1,7 @@
 # Scoop bucket for the Concentric agent
 
 ```powershell
+scoop install git     # if you don't have it: Scoop needs it to add a bucket
 scoop bucket add bckupx https://github.com/Lekejosh/scoop-bckupx
 scoop install bckupx/bckupx-agent
 ```
