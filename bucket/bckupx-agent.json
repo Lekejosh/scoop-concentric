@@ -1,12 +1,12 @@
 {
-    "version": "0.1.45",
+    "version": "0.1.46",
     "description": "Concentric backup agent: scheduled database backups with restore verification",
     "homepage": "https://bckupx.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://agents.bckupx.com/0.1.45/agent-v0.1.45.exe#/bckupx-agent.exe",
-            "hash": "e3febd4d192c847a7469365c5e5da70d31637991d9b9169c1407e85c052fdecc"
+            "url": "https://agents.bckupx.com/0.1.46/agent-v0.1.46.exe#/bckupx-agent.exe",
+            "hash": "cf31e1d060991ca272ddebf0013895b1c1b5e20777d42edf3b7dfde57a458504"
         }
     },
     "bin": "bckupx-agent.exe",
