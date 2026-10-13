@@ -1,6 +1,6 @@
 {
     "version": "0.1.46",
-    "description": "Orbiter, the Concentric backup agent: scheduled database backups with restore verification",
+    "description": "Orbiter for Concentric: scheduled database backups with restore verification",
     "homepage": "https://concentric.sh",
     "license": "MIT",
     "architecture": {
