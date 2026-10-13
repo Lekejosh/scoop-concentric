@@ -2,8 +2,8 @@
 
 ```powershell
 scoop install git     # if you don't have it: Scoop needs it to add a bucket
-scoop bucket add bckupx https://github.com/Lekejosh/scoop-bckupx
-scoop install bckupx/bckupx-agent
+scoop bucket add concentric https://github.com/Lekejosh/scoop-concentric
+scoop install concentric/bckupx-agent
 ```
 
 That puts `bckupx-agent` on your PATH (for example `bckupx-agent recover` to

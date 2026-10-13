@@ -1,11 +1,11 @@
 {
     "version": "0.1.46",
     "description": "Concentric backup agent: scheduled database backups with restore verification",
-    "homepage": "https://bckupx.com",
+    "homepage": "https://concentric.sh",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://agents.bckupx.com/0.1.46/agent-v0.1.46.exe#/bckupx-agent.exe",
+            "url": "https://get.concentric.sh/0.1.46/agent-v0.1.46.exe#/bckupx-agent.exe",
             "hash": "cf31e1d060991ca272ddebf0013895b1c1b5e20777d42edf3b7dfde57a458504"
         }
     },
@@ -21,15 +21,15 @@
         "has to stop it. Remove it with `bckupx-agent service uninstall` (keeps your data)."
     ],
     "checkver": {
-        "url": "https://agents.bckupx.com/latest.json",
+        "url": "https://get.concentric.sh/latest.json",
         "jsonpath": "$.version"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://agents.bckupx.com/$version/agent-v$version.exe#/bckupx-agent.exe",
+                "url": "https://get.concentric.sh/$version/agent-v$version.exe#/bckupx-agent.exe",
                 "hash": {
-                    "url": "https://agents.bckupx.com/$version/manifest.json",
+                    "url": "https://get.concentric.sh/$version/manifest.json",
                     "jsonpath": "$.artifacts.windows.sha256"
                 }
             }
