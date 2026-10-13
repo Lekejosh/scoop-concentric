@@ -1,0 +1,35 @@
+{
+    "version": "0.1.46",
+    "description": "Concentric backup agent: scheduled database backups with restore verification",
+    "homepage": "https://concentric.sh",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://get.concentric.sh/0.1.46/agent-v0.1.46.exe#/bckupx-agent.exe",
+            "hash": "cf31e1d060991ca272ddebf0013895b1c1b5e20777d42edf3b7dfde57a458504"
+        }
+    },
+    "bin": "bckupx-agent.exe",
+    "notes": [
+        "bckupx-agent is now Orbiter. Switch with:",
+        "",
+        "  scoop uninstall bckupx-agent",
+        "  scoop install concentric/orbiter",
+        "  orbiter service install    # elevated; moves the existing service, settings and data"
+    ],
+    "checkver": {
+        "url": "https://get.concentric.sh/latest.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://get.concentric.sh/$version/agent-v$version.exe#/bckupx-agent.exe",
+                "hash": {
+                    "url": "https://get.concentric.sh/$version/manifest.json",
+                    "jsonpath": "$.artifacts.windows.sha256"
+                }
+            }
+        }
+    }
+}

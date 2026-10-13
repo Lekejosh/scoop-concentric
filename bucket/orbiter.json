@@ -1,24 +1,29 @@
 {
     "version": "0.1.46",
-    "description": "Concentric backup agent: scheduled database backups with restore verification",
+    "description": "Orbiter, the Concentric backup agent: scheduled database backups with restore verification",
     "homepage": "https://concentric.sh",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://get.concentric.sh/0.1.46/agent-v0.1.46.exe#/bckupx-agent.exe",
+            "url": "https://get.concentric.sh/0.1.46/agent-v0.1.46.exe#/orbiter.exe",
             "hash": "cf31e1d060991ca272ddebf0013895b1c1b5e20777d42edf3b7dfde57a458504"
         }
     },
-    "bin": "bckupx-agent.exe",
+    "bin": "orbiter.exe",
     "notes": [
         "To run the agent as a Windows service (starts at boot, restarts itself, keeps itself",
         "up to date), run this once in an elevated PowerShell (Run as Administrator):",
         "",
-        "  bckupx-agent service install",
+        "  orbiter service install",
         "",
         "It asks for your license key (portal: Agents -> Add agent) and master passphrase.",
-        "The service runs its own copy from C:\\Program Files\\bckupx, so `scoop update` never",
-        "has to stop it. Remove it with `bckupx-agent service uninstall` (keeps your data)."
+        "The service runs its own copy from C:\\Program Files\\Concentric\\Orbiter, so",
+        "`scoop update` never has to stop it. Remove it with `orbiter service uninstall`",
+        "(keeps your data).",
+        "",
+        "Coming from bckupx-agent: `scoop uninstall bckupx-agent`, then run",
+        "`orbiter service install` as above - it moves the existing service, settings and",
+        "data over, keeping your keys."
     ],
     "checkver": {
         "url": "https://get.concentric.sh/latest.json",
@@ -27,7 +32,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://get.concentric.sh/$version/agent-v$version.exe#/bckupx-agent.exe",
+                "url": "https://get.concentric.sh/$version/agent-v$version.exe#/orbiter.exe",
                 "hash": {
                     "url": "https://get.concentric.sh/$version/manifest.json",
                     "jsonpath": "$.artifacts.windows.sha256"
