@@ -1,12 +1,12 @@
 {
-    "version": "0.1.48",
+    "version": "0.1.49",
     "description": "Orbiter for Concentric: scheduled database backups with restore verification",
     "homepage": "https://concentric.sh",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://get.concentric.sh/0.1.48/agent-v0.1.48.exe#/orbiter.exe",
-            "hash": "856bbe0c9d55cc1506bf133792310f5bc189e172cfe529784dd7738810079ca3"
+            "url": "https://get.concentric.sh/0.1.49/agent-v0.1.49.exe#/orbiter.exe",
+            "hash": "67942332ea15848df28bc68dceb3895d417e84480c7bd206f9ea21640dd5e321"
         }
     },
     "bin": "orbiter.exe",
